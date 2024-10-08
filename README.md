@@ -13,6 +13,12 @@ All datasets are available via REST API, and they can be fetched from the follow
 
 Please devise a solution to build the researcher's report. You can use C#, Python, Javascript or a mix of these for your solution.
 
+## Main Requirements
+
+1. Visual Studio 2022
+2. Dotnet 8
+3. Nuget
+
 ## Assumptions and Direction
 
 The parameters of this coding test were very loose, so I made some assumptions that I will explain here.
