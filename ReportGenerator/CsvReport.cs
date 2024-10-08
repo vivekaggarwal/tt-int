@@ -2,19 +2,12 @@
 
 namespace ReportGenerator
 {
-    public class CsvReport
+    public class CsvReport : IReport
     {
-        static readonly string HEADER = "ISIN,SEDOL,Instrument Name,Type,Currency,Moody's Rating,Analyst Rating\n";
+        static readonly string HEADER = "ISIN,SEDOL,Instrument Name,Type,Currency,Moody's Rating,Analyst Rating";
         static readonly string SEPERATOR = ",";
 
-        private readonly IEnumerable<ReportLine> reportLines;
-
-        public CsvReport(IEnumerable<ReportLine> reportLines)
-        {
-            this.reportLines = reportLines;
-        }
-
-        public override string ToString()
+        public string GenerateReport(IEnumerable<ReportLine> reportLines)
         {
             StringBuilder output = new();
 

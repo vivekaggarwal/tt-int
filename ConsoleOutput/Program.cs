@@ -22,9 +22,18 @@ class Program
         // Ensure data is not null before generating the report
         if (instruments != null && moodysRatings != null && analystRatings != null)
         {
-            var reportBuilder = new CsvReportBuilder(instruments, moodysRatings, analystRatings);
-            var csvReport = reportBuilder.GetCsvReport();
-            Console.WriteLine(csvReport.ToString());
+            var reportBuilder = new ReportDataProvider(instruments, moodysRatings, analystRatings);
+            var reportData = reportBuilder.GetReportData();
+            
+            var csvReport = new CsvReport();
+            var report = csvReport.GenerateReport(reportData);
+
+            var outputFilePath = $"{DateTime.Now.ToString("yyyy-dd-M-HH-mm-ss")}-report.csv";
+
+            File.WriteAllText(outputFilePath, report);
+            Console.WriteLine(report.ToString());
+
+            Console.WriteLine($"Report has also been generated as an file and is located here: {Path.GetFullPath(outputFilePath)}");
         }
         else
         {

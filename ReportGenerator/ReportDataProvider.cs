@@ -2,20 +2,20 @@
 
 namespace ReportGenerator
 {
-    public class CsvReportBuilder
+    public class ReportDataProvider : IReportDataProvider<ReportLine>
     {
         private readonly IEnumerable<Instrument> _instruments;
         private readonly RatingProvider _moodysRatings;
         private readonly RatingProvider _analystRatings;
 
-        public CsvReportBuilder(IEnumerable<Instrument> instruments, IEnumerable<MoodysRating> moodysRatings, IEnumerable<AnalystRating> analystRatings)
+        public ReportDataProvider(IEnumerable<Instrument> instruments, IEnumerable<MoodysRating> moodysRatings, IEnumerable<AnalystRating> analystRatings)
         {
             _instruments = instruments;
             _moodysRatings = new RatingProvider(moodysRatings);
             _analystRatings = new RatingProvider(analystRatings);
         }
         
-        public CsvReport GetCsvReport()
+        public IEnumerable<ReportLine> GetReportData()
         {
             IList<ReportLine> lines = new List<ReportLine>();
 
@@ -31,7 +31,7 @@ namespace ReportGenerator
                 });
             }
 
-            return new CsvReport(lines) ;
+            return lines;
         }
     }
 }
