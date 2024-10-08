@@ -4,7 +4,7 @@ namespace ReportGenerator
 {
     public class CsvReport : IReport
     {
-        static readonly string HEADER = "ISIN,SEDOL,Instrument Name,Type,Currency,Moody's Rating,Analyst Rating";
+        static readonly string HEADER = "ISIN,SEDOL,Instrument Name,Instrument Type,Base Currency,Moody's Rating,Analyst Rating";
         static readonly string SEPERATOR = ",";
 
         public string GenerateReport(IEnumerable<ReportLine> reportLines)

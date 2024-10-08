@@ -8,13 +8,13 @@ namespace ApiOutput.Controllers
     [Route("[controller]")]
     public class AnalystReportController : Controller
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<AnalystReportController> _logger;
         private static readonly string instrumentsUrl = "https://mocki.io/v1/5c913cd3-77b2-43b7-9c74-0982e6174298";
         private static readonly string moodysRatingsUrl = "https://mocki.io/v1/11ab88f0-0a9a-44ad-ac40-334005fc5117";
         private static readonly string analystRatingsUrl = "https://mocki.io/v1/1cf057a5-e4c7-4cd3-9701-fbf29d379a39";
 
 
-        public AnalystReportController(ILogger<WeatherForecastController> logger)
+        public AnalystReportController(ILogger<AnalystReportController> logger)
         {
             _logger = logger;
         }
