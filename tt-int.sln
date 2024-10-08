@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleOutput", "ConsoleOut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGenerator.Tests", "ReportGenerator.Tests\ReportGenerator.Tests.csproj", "{EF3528F7-2F48-41D2-9470-6338EA533931}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiOutput", "ApiOutput\ApiOutput.csproj", "{FEECA73B-C63F-45E7-B119-3298EA19DBE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EF3528F7-2F48-41D2-9470-6338EA533931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3528F7-2F48-41D2-9470-6338EA533931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3528F7-2F48-41D2-9470-6338EA533931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEECA73B-C63F-45E7-B119-3298EA19DBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEECA73B-C63F-45E7-B119-3298EA19DBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEECA73B-C63F-45E7-B119-3298EA19DBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEECA73B-C63F-45E7-B119-3298EA19DBE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

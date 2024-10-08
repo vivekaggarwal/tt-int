@@ -33,7 +33,7 @@ namespace ReportGenerator.Tests
         {
             string filePath = "./data/moodys.json";
 
-            var result = JsonConvert.DeserializeObject<ApiResponse<AnalystRating>>(File.ReadAllText(filePath));
+            var result = JsonConvert.DeserializeObject<ApiResponse<MoodysRating>>(File.ReadAllText(filePath));
 
             result.Should().NotBeNull();
             result.Values.Count.Should().Be(17);
