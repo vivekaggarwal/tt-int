@@ -9,7 +9,7 @@ namespace ReportGenerator.Tests
         [Fact]
         public void CsvReport_GeneratesReport_Correctly()
         {
-            var expectedResult = "ISIN,SEDOL,Instrument Name,Type,Currency,Moody's Rating,Analyst Rating\r\nBMG9456A1009 UW,2367963 UW,GOLAR LNG LTD (UW),Equity,USD,Not available,Buy\r\n";
+            var expectedResult = "ISIN,SEDOL,Instrument Name,Instrument Type,Base Currency,Moody's Rating,Analyst Rating\r\nBMG9456A1009 UW,2367963 UW,GOLAR LNG LTD (UW),Equity,USD,Not available,Buy\r\n";
 
             string instrumentsJsonPath = "./data/instruments.json";
             string moodysJsonPath = "./data/moodys.json";
